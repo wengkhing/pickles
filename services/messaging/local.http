@@ -1,0 +1,52 @@
+### Register Talent
+
+POST http://localhost:3010/talent/register
+Content-Type: application/json
+
+{
+  "email": "wengkhing@gmail.com",
+  "password": "Qwer@1234",
+  "name": "John Doe"
+}
+
+### Verify Talent
+
+POST http://localhost:3010/talent/verify?userId=7ca139ad-1797-455f-a108-2a19d5bcea3a&code=309410
+
+### Login Talent
+### After logging in, cookie will be present in subsequent calls unless revoked
+
+POST http://localhost:3010/talent/login
+Content-Type: application/json
+
+{
+  "email": "wengkhing@gmail.com",
+  "password": "Qwer@1234"
+}
+
+### Reset Password Talent
+
+
+POST http://localhost:3010/talent/password/reset
+Content-Type: application/json
+
+{
+  "email": "wengkhing@gmail.com"
+}
+
+### Complete Reset Password Talent
+
+POST http://localhost:3010/talent/password/completeReset
+Content-Type: application/json
+
+{
+  "userId": "7ca139ad-1797-455f-a108-2a19d5bcea3a",
+  "password": "Qwer@1234",
+  "code": "774509"
+}
+
+### Logout Talent
+
+GET http://localhost:3010/talent/logout
+
+### TODO: Include Hirer testing endpoints

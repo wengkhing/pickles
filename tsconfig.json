@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "lib": ["esnext"],
+    "allowJs": true,
+    "removeComments": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "target": "es2019",
+    "baseUrl": ".",
+    "paths": {
+      "@app/shared/*": ["shared/*"],
+    }
+  }
+}
