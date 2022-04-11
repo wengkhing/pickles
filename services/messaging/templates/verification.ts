@@ -1,4 +1,4 @@
-import VerifyHtmlTemplate from './verify.html';
+import VerifyHtmlTemplate from './verification.html';
 import { EmailTemplate } from '../helper/type';
 
 const VerifyEmailHtmlTemplate: EmailTemplate = {

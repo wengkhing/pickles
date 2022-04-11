@@ -3,7 +3,8 @@ Content-Type: application/json
 
 {
   "name": "WK Wong",
-  "email": "test@mail.com"
+  "email": "test@mail.com",
+  "template": "transaction"
 }
 
 ### Dev environment
@@ -13,5 +14,6 @@ Content-Type: application/json
 
 {
   "name": "WK Wong",
-  "email": "test@mail.com"
+  "email": "test@mail.com",
+  "template": "verification"
 }
