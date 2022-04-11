@@ -23,6 +23,10 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
     ],
   }
 };

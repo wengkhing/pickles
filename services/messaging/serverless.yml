@@ -4,7 +4,6 @@ frameworkVersion: '3'
 plugins:
   - serverless-webpack
   - serverless-prune-plugin
-  - serverless-dotenv-plugin
   - serverless-offline
 
 custom:
@@ -43,7 +42,28 @@ provider:
           - Ref: 'AWS::Region'
           - Ref: 'AWS::AccountId'
           - 'event-bus/${self:custom.config.appName}-event-bus-${self:provider.stage}'
-
+    - Effect: "Allow"
+      Action:
+        - ses:sendEmail
+      Resource:
+      - 'Fn::Join':
+        - ':'
+        -
+          - 'arn:aws:ses'
+          - Ref: 'AWS::Region'
+          - Ref: 'AWS::AccountId'
+          - 'identity/wengkhing.com'
+    - Effect: "Allow"
+      Action:
+        - ses:sendEmail
+      Resource:
+      - 'Fn::Join':
+        - ':'
+        -
+          - 'arn:aws:ses'
+          - Ref: 'AWS::Region'
+          - Ref: 'AWS::AccountId'
+          - 'identity/test@mail.com'
 functions:
   api:
     handler: 'handler.main'
