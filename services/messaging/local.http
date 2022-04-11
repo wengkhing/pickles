@@ -1,3 +1,7 @@
+### For local development purpose
+### Available option for template: verification|transaction
+### It refer to the usage of different email template
+
 POST http://localhost:3010/email
 Content-Type: application/json
 
@@ -7,8 +11,11 @@ Content-Type: application/json
   "template": "transaction"
 }
 
-### Dev environment
-
+### Deployed dev environment
+### Heads-up, email address need to be whitelisted before usage else the request would fail
+### This is because SES in my AWS account is in Sandbox Mode
+### If you would like to test, I could add your email as a verified identity,
+### just let me know
 POST https://owjyvo9odh.execute-api.ap-southeast-1.amazonaws.com/email
 Content-Type: application/json
 

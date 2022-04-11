@@ -66,7 +66,7 @@ export default async ({ req, res, dep }: ControllerPayload) => {
       return res.status(400).json({
         code: 'EMAIL_NOT_VERIFIED',
         message:
-          'Please add your email as verified identities in SES dashboard.',
+          'Please add your email as verified identities in SES dashboard or contact Weng Khing for further assistance.',
       });
     }
 
