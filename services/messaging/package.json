@@ -5,6 +5,7 @@
   "scripts": {
     "start": "sls offline",
     "test": "jest",
+    "lint": "eslint . --ext .ts",
     "deploy": "sls deploy",
     "env:local": "rm .env & chmod +x ./script/getenv.sh && ./script/getenv.sh heygetme-talent-dev TALENT && ./script/getenv.sh heygetme-hirer-dev HIRER"
   },
