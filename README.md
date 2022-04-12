@@ -78,3 +78,5 @@ Assume that you have already own a domain name:
 3. Simple pipeline setup using Github Workflows, assume that master branch for production environment and other branches for development environment. AWS key and secret need to be setup in Github. Go to repository settings -> Secrets -> Actions -> New repository secret
 
 4. Monorepo setup, so that in future new microservices can be added here to provide better local development experience. For example, running `yarn` would install all dependencies on all microservices and `yarn workspaces start` would start all services locally with a single command.
+
+5. [serverless-http](https://github.com/dougmoscrop/serverless-http) is used, meaning there would be only a single lambda function to serve all the endpoints. [handler.ts](services/messaging/handler.ts) would manage the list of endpints instead of configuring in [serverless.yml](services/messaging/serverless.yml).
