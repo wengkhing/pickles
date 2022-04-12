@@ -69,6 +69,10 @@ Assume that you have already own a domain name:
 3. Click "Create Identity" and you will see a set of CNAME key-value pairs generated
 4. Copy these CNAME key-value pairs to the domain name provider (eg. ionos, godaddy) and paste them in the DNS record manager
 
+## Important, please take note
+
+Renaming `appname` in [shared/constants/app.js](shared/constants/app.js) would affect deployment naming of all AWS resources within this repo, including serverless service name. Serverless service name is constructed by combining `appname` and microservice name defined in `package.json`. Most deployed AWS resources would be prefixed with `appName-serviceName`, eg. `wengkhing-pickles-messaging`, to make it easier to identify these resources.
+
 ## Assumptions
 
 1. Before sending email with the deployed endpoint, email need to be whitelisted because AWS SES account is in [sandbox mode](https://docs.aws.amazon.com/ses/latest/dg/request-production-access.html).
